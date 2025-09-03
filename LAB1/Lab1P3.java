@@ -1,10 +1,12 @@
+import java.util.Scanner;
+
 class Lab1P3{
 	public static void main(String...args){
-		var a = 20;
-		var b = 34.8;
+		Scanner s = new Scanner(System.in);
 		
-		var c = a+b;
-		
+		int a = s.nextInt();
+		int b = s.nextInt();
+		var c = a/b;
 		System.out.println(c);
 		
 	}
