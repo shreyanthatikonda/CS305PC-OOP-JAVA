@@ -1,0 +1,36 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+class TabbedDemo extends JFrame {
+
+    TabbedDemo() {
+        super("Tabbed Pane Demo");
+
+        JTabbedPane jtp = new JTabbedPane();  
+        
+        JPanel panel1 = new JPanel();
+        panel1.add(new JLabel("This is Tab 1"));
+
+        JPanel panel2 = new JPanel();
+        panel2.add(new JLabel("This is Tab 2"));
+
+        JPanel panel3 = new JPanel();
+        panel3.add(new JLabel("This is Tab 3"));
+
+        jtp.addTab("Tab 1", panel1);
+        jtp.addTab("Tab 2", panel2);
+        jtp.addTab("Tab 3", panel3);
+
+        add(jtp); 
+
+        setSize(400, 300);
+        setLocationRelativeTo(null); 
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        new TabbedDemo();
+    }
+}
