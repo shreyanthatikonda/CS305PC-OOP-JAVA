@@ -1,0 +1,33 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+class TableDemo extends JFrame {
+
+    TableDemo() {
+        super("JTable Demo");
+
+        String[] heading = {"name", "course", "rollNo"};
+        String[][] data = {
+                {"DELL", "cse", "24AG1A05I2"},
+                {"BELL", "csd", "24AG1A05E6"},
+                {"CELL", "csm", "24AG1A05H1"},
+                {"YELL", "csit", "24AG1A05H2"}
+        };
+
+        JTable jt = new JTable(data, heading);
+
+        // Add inside scroll pane
+        JScrollPane jsp = new JScrollPane(jt);
+        add(jsp);
+
+        setSize(500, 500);
+        setLocationRelativeTo(null);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        new TableDemo();
+    }
+}
